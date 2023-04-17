@@ -1,0 +1,66 @@
+.span-item {
+  border: 2px solid #12346d;
+  padding: 8px 10px;
+  background-color: #12346d;
+}
+
+.Country {
+  grid-column: span 2;
+}
+
+.span-item > p {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.incident-text,
+.confirmed-text,
+.death-text,
+.ratio-text {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.incident-details,
+.cases-details,
+.deaths-details,
+.ratio-details {
+  color: #a6d8e9;
+}
+
+.incident-details {
+  color: orange;
+}
+
+.icon-wrapper {
+  font-size: 1.2rem;
+}
+
+.deaths-details {
+  color: red;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header > p {
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .Country {
+    grid-column: span 3;
+  }
+}
