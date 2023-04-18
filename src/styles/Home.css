@@ -122,6 +122,7 @@
   position: relative;
   justify-content: space-between;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .global,
@@ -214,7 +215,7 @@
   font-weight: 700;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   p {
     font-size: 0.875rem;
   }

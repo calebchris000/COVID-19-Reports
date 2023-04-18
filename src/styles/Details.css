@@ -4,7 +4,15 @@
   background-color: #12346d;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.details-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 4px 8px;
 }
 
 .Country {
@@ -66,14 +74,14 @@
   grid-template-columns: 1fr 1fr;
 }
 
-@media screen and (max-width: 320px) {
-  .Country {
-    grid-column: auto;
+@media screen and (max-width: 375px) {
+  .details-row {
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .Country {
-    grid-column: span 3;
+  .details-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
