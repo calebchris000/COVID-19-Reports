@@ -1,0 +1,282 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #566cbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.home {
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+.navbar {
+  border-bottom: 2px solid white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #031f45;
+  align-items: center;
+  padding: 20px 20px;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.logo {
+  display: none;
+}
+
+.goBack {
+  display: none;
+  transition: all 100ms ease;
+}
+
+.goBack:hover {
+  transform: translateX(-4px);
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+.covid-19-report > *:first-child {
+  margin: 0 10px;
+}
+
+.navbar > *:nth-child(4):hover {
+  transition: all 0.8s ease;
+  transform: rotateZ(180deg);
+}
+
+.covid-19-report {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.searchBar {
+  align-items: center;
+  position: relative;
+}
+
+.searchBar > input {
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  width: 50px;
+  padding: 0.6rem 0.4rem;
+  opacity: 0;
+  border-radius: 1.2rem;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.searchBar > input::placeholder {
+  color: rgb(151, 151, 151);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.searchBar > input:focus {
+  width: 200px;
+  opacity: 1;
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  pointer-events: none;
+}
+
+.Info {
+  background-color: #566cbd;
+  margin: 70px 8px 4px 8px;
+  padding: 10px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.Info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 50, 73, 0.6);
+  background-image: url(../images/world.svg);
+  background-size: contain;
+  filter: brightness(0.4);
+}
+
+.Info-Wrapper {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.global,
+.confirmed-text-home,
+.deaths-text {
+  margin: 0;
+  position: relative;
+}
+
+.global {
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+
+.confirmed-text-home,
+.deaths-text {
+  font-weight: 700;
+}
+
+.confirmed,
+.deaths {
+  font-size: 0.875rem;
+  color: #ffae44;
+  font-weight: 600;
+  margin: 0;
+}
+
+.deaths {
+  color: rgb(228, 6, 6);
+}
+
+.Info > p {
+  margin: 1px;
+  padding: 0;
+}
+
+.second-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+  gap: 8px;
+  padding: 4px 8px;
+}
+
+.section {
+  border: 2px solid #566cbd;
+  background-color: #566cbd;
+  padding: 10px;
+  user-select: none;
+  position: relative;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.section:focus {
+  outline: none;
+}
+
+.arrow {
+  text-align: end;
+  align-self: end;
+  float: right;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateX(6px);
+}
+
+.section > p {
+  margin: 0;
+  padding: 0;
+}
+
+.section > p:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a6d8e9;
+}
+
+.country-section-text {
+  color: white;
+}
+
+.cases {
+  font-size: 0.875rem;
+  color: #ffae44;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+  p {
+    font-size: 0.875rem;
+  }
+
+  .second-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .searchBar {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    border: none;
+  }
+
+  .logo {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .searchBar > input {
+    width: 200px;
+    opacity: 1;
+  }
+
+  .searchBar > input:focus {
+    outline: none;
+  }
+
+  .global {
+    font-size: 3rem;
+  }
+
+  .confirmed-text-home,
+  .deaths-text {
+    font-size: 1.1rem;
+  }
+
+  .Info {
+    padding: 10px 6rem;
+  }
+
+  .confirmed,
+  .deaths {
+    font-size: 1.2rem;
+  }
+
+  p,
+  .cases,
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  .cases {
+    font-size: 1.1rem;
+  }
+
+  .second-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

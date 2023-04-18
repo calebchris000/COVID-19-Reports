@@ -1,0 +1,96 @@
+.span-item {
+  border: 2px solid #12346d;
+  padding: 20px 10px;
+  background-color: #12346d;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.details-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px 8px;
+}
+
+.Country {
+  grid-column: 1 / -1;
+}
+
+.span-item > p {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.incident-text,
+.confirmed-text,
+.death-text,
+.ratio-text {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.incident-details,
+.cases-details,
+.deaths-details,
+.ratio-details {
+  color: #a6d8e9;
+}
+
+.incident-details {
+  color: orange;
+}
+
+.icon-wrapper {
+  font-size: 1.2rem;
+}
+
+.deaths-details {
+  color: red;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header > p {
+  margin: 0 10px;
+}
+
+.details-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 375px) {
+  .details-row {
+    grid-template-columns: 1fr;
+  }
+
+  .Country {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .details-row {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px;
+  }
+
+  .Country {
+    grid-column: 1 / -1;
+  }
+}
