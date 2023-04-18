@@ -59,7 +59,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Coming soon...
+[Link](https://covid19-reports.netlify.app/)
+
+## Presentation
+
+[Link to my presentation](https://www.loom.com/share/990d54b431574628856ac35340f68900)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,7 +175,7 @@ If you like this project, give it s a star :star:
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the people involved for making this project possible.
+I want to use this medium to appreciate Nelson Sakwa on Behance who inspired the UI.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
