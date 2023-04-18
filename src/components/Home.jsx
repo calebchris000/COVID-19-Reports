@@ -54,7 +54,7 @@ const Section = ({ country, cases, index }) => {
           <FontAwesomeIcon icon={faArrowRight} />
         </i>
       </i>
-      <p>{country}</p>
+      <p className='country-section-text'>{country}</p>
       <p className="cases">{cases}</p>
     </button>
   );
