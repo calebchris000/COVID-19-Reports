@@ -243,6 +243,10 @@
     opacity: 1;
   }
 
+  .searchBar > input:focus {
+    outline: none;
+  }
+
   .global {
     font-size: 3rem;
   }
