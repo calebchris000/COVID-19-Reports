@@ -166,7 +166,7 @@ Feel free to check the [issues page](../../issues/).
 If you like this project, give it s a star :star:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+ 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
