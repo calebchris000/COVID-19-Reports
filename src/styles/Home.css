@@ -48,6 +48,22 @@
 
 .covid-19-report > *:first-child {
   margin: 0 10px;
+  color: red;
+  transition: all 0.5s ease;
+}
+
+.covid-19-report > *:first-child:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale();
+  }
+  50% {
+  transform: scale(1.2);
+
+  }
 }
 
 .navbar > *:nth-child(4):hover {
@@ -249,7 +265,7 @@
   }
 
   .global {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .confirmed-text-home,
