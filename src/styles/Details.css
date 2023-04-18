@@ -66,6 +66,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 320px) {
+  .Country {
+    grid-column: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .Country {
     grid-column: span 3;
