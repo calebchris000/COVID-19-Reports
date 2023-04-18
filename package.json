@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "dev",
-    "test": "react-scripts test"
+    "test": "jest"
   },
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
