@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](covid-19-reports-gh6r-mxk5zjqkj-calebchris000.vercel.app)
+Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +127,7 @@ To run the project, execute the following command:
 
 ### Deployment
 
-The project has been deployed with Github pages. You can visit the link [here](covid-19-reports-gh6r-mxk5zjqkj-calebchris000.vercel.app)
+The project will be deployed soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
