@@ -1,9 +1,9 @@
-import React from "react";
-import {Provider} from "react-redux";
-import Home from "../components/Home";
-import {render} from "@testing-library/react";
-import {configureStore} from "@reduxjs/toolkit";
-import "@testing-library/jest-dom/extend-expect";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { render } from '@testing-library/react';
+import { configureStore } from '@reduxjs/toolkit';
+import Home from '../components/Home';
+import '@testing-library/jest-dom/extend-expect';
 
 const initialState = {
   data: {
@@ -15,21 +15,19 @@ const initialState = {
     },
     rawData: [
       {
-        Country_Region: "Nigeria",
-        Confirmed: "23421",
-        Province_State: "Nigeria",
+        Country_Region: 'Nigeria',
+        Confirmed: '23421',
+        Province_State: 'Nigeria',
       },
     ],
   },
-  state: "Success",
+  state: 'Success',
   detail: null,
 };
 
 const store = configureStore({
   reducer: {
-    Home: (state = initialState, action) => {
-      return state;
-    },
+    Home: (state = initialState) => state,
   },
 });
 
@@ -37,48 +35,43 @@ beforeEach(() => {
   jest.resetModules();
 });
 
-describe("Testing Rendering Elements", () => {
-  const {container} = render(
+describe('Testing Rendering Elements', () => {
+  const { container } = render(
     <Provider store={store}>
       <Home />
-    </Provider>
+    </Provider>,
   );
 
-  it("Should have elements in the document", () => {
-    const navbar =
-      container.getElementsByClassName(
-        "navbar"
-      )[0];
-    const title =
-      container.getElementsByClassName(
-        "searchBar"
-      )[0];
+  it('Should have elements in the document', () => {
+    const navbar = container.getElementsByClassName(
+      'navbar',
+    )[0];
+    const title = container.getElementsByClassName(
+      'searchBar',
+    )[0];
     expect(navbar).toBeInTheDocument();
     expect(title).toBeInTheDocument();
   });
 });
 
-describe("Testiing imported components", () => {
-  it("Should have all imported components element", () => {
-    const {container} = render(
+describe('Testiing imported components', () => {
+  it('Should have all imported components element', () => {
+    const { container } = render(
       <Provider store={store}>
         <Home />
-      </Provider>
+      </Provider>,
     );
-    const global =
-      container.getElementsByClassName(
-        "global"
-      )[0];
+    const global = container.getElementsByClassName(
+      'global',
+    )[0];
 
-    const deaths =
-      container.getElementsByClassName(
-        "deaths"
-      )[0];
+    const deaths = container.getElementsByClassName(
+      'deaths',
+    )[0];
 
-    const cases =
-      container.getElementsByClassName(
-        "cases"
-      )[0];
+    const cases = container.getElementsByClassName(
+      'cases',
+    )[0];
 
     expect(global).toBeInTheDocument();
     expect(deaths).toBeInTheDocument();

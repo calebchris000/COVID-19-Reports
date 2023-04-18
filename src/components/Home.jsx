@@ -1,5 +1,5 @@
 import '../styles/Home.css';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   faArrowLeft,
   faSearch,
@@ -14,7 +14,6 @@ import {
   useDispatch,
   useSelector,
 } from 'react-redux';
-import { useEffect, useRef, useState } from 'react';
 import GetData from '../redux/Home/HomeAPI';
 import Component from './Details';
 import { setDetails } from '../redux/Home/HomeSlice';
@@ -55,7 +54,7 @@ const Section = ({ country, cases, index }) => {
           <FontAwesomeIcon icon={faArrowRight} />
         </i>
       </i>
-      <p className='country-section-text'>{country}</p>
+      <p className="country-section-text">{country}</p>
       <p className="cases">{cases}</p>
     </button>
   );
@@ -155,12 +154,12 @@ const Home = () => {
         confirmed={
           state === 'Success'
             ? data.summaryStats.global.confirmed
-            : 'loading'
+            : 0
         }
         deaths={
           state === 'Success'
             ? data.summaryStats.global.deaths
-            : 'loading'
+            : 0
         }
       />
       <div className="second-row">{content}</div>
@@ -169,8 +168,8 @@ const Home = () => {
 };
 
 Info.propTypes = {
-  confirmed: PropTypes.any.isRequired,
-  deaths: PropTypes.any.isRequired,
+  confirmed: PropTypes.number.isRequired,
+  deaths: PropTypes.number.isRequired,
 };
 
 Section.propTypes = {
