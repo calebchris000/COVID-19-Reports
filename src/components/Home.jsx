@@ -42,10 +42,10 @@ const Info = ({ confirmed, deaths }) => (
   </div>
 );
 
-const Section = ({ country, cases, index }) => {
+const Section = ({ country, cases }) => {
   const dispatch = useDispatch();
   function handleClick() {
-    dispatch(setDetails(index));
+    dispatch(setDetails(country));
   }
   return (
     <button
@@ -99,11 +99,7 @@ const Home = () => {
             <Section
               key={uuidv4()}
               index={index}
-              country={
-                item.Country_Region === 'US'
-                  ? `US: ${item.Province_State}`
-                  : item.Country_Region
-              }
+              country={item.Combined_Key}
               cases={item.Confirmed}
             />
           ))}
@@ -117,20 +113,33 @@ const Home = () => {
     && arrowBack.current !== null
   ) {
     arrowBack.current.style.display = 'block';
+    const indexOfData = [
+      data.rawData.findIndex(
+        (obj) => obj.Combined_Key === details,
+      ),
+    ];
     content = (
       <div className="details-row">
         <Component
-          date={data.rawData[details].Last_Update}
+          date={
+            data.rawData[indexOfData].Last_Update
+          }
           country={
-          data.rawData[details].Country_Region
-        }
+            data.rawData[indexOfData]
+              .Combined_Key
+          }
           incident={parseFloat(
-            data.rawData[details].Incident_Rate,
+            data.rawData[indexOfData]
+              .Incident_Rate,
           ).toFixed(4)}
-          cases={data.rawData[details].Confirmed}
-          deaths={data.rawData[details].Deaths}
+          cases={
+            data.rawData[indexOfData].Confirmed
+          }
+          deaths={
+            data.rawData[indexOfData].Deaths
+          }
           ratio={parseFloat(
-            data.rawData[details]
+            data.rawData[indexOfData]
               .Case_Fatality_Ratio,
           ).toFixed(4)}
         />
@@ -191,6 +200,5 @@ Info.propTypes = {
 Section.propTypes = {
   country: PropTypes.string.isRequired,
   cases: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
 };
 export default Home;
