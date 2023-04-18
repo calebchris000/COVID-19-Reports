@@ -75,6 +75,7 @@
   opacity: 0;
   border-radius: 1.2rem;
   transition: all 0.4s ease;
+  color: white;
 }
 
 .searchBar > input::placeholder {
@@ -174,6 +175,7 @@
   border-radius: 0;
   outline: none;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .section:focus {
@@ -200,6 +202,10 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: #a6d8e9;
+}
+
+.country-section-text {
+  color: white;
 }
 
 .cases {
