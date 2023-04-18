@@ -1,4 +1,5 @@
 import '../styles/Home.css';
+import React from 'react';
 import {
   faArrowLeft,
   faSearch,
@@ -101,7 +102,7 @@ const Home = () => {
       ));
   }
 
-  if (state === 'Success' && details !== null) {
+  if (state === 'Success' && details !== null && arrowBack.current !== null) {
     arrowBack.current.style.display = 'block';
     content = (
       <Component
@@ -168,13 +169,13 @@ const Home = () => {
 };
 
 Info.propTypes = {
-  confirmed: PropTypes.string.isRequired,
-  deaths: PropTypes.string.isRequired,
+  confirmed: PropTypes.any.isRequired,
+  deaths: PropTypes.any.isRequired,
 };
 
 Section.propTypes = {
   country: PropTypes.string.isRequired,
   cases: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
 export default Home;
